@@ -13,12 +13,12 @@
     "dayjs",
     "khorshidi"
   ],
-  "author": "SaeedRahimi",
-  "homepage": "https://saeedrahimi.github.io/antd-jalali",
+  "author": "ashkan4ever",
+  "homepage": "https://github.com/ashkan4ever/antd-jalali-fixed",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saeedrahimi/antd-jalali"
+    "url": "https://github.com/ashkan4ever/antd-jalali-fixed"
   },
   "main": "lib/cjs/index.cjs.js",
   "module": "lib/esm/index.js",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.10",
-    "jalaliday": "^2.3.0",
+    "jalali-plugin-dayjs": "^1.1.4",
     "rc-picker": "^4.6.6"
   },
   "peerDependencies": {
