@@ -7,7 +7,7 @@ A wrapper for ant-design date picker and calendar to support Jalali calendar typ
 
 ## Demo
 
-[https://saeedrahimi.github.io/antd-jalali/](https://saeedrahimi.github.io/antd-jalali/)
+[https://ashkan4ever.github.io/antd-jalali-fixed/](https://ashkan4ever.github.io/antd-jalali-fixed/)
 
 ## Top Features
 
