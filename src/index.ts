@@ -1,4 +1,3 @@
-export { default as DatePicker } from "./date-picker";
-// export { default as Calendar } from "./calendar";
-export { default as TimePicker } from "./time-picker";
+import { DatePicker, TimePicker, Calendar } from "antd";
+export {DatePicker, TimePicker, Calendar };
 export { JalaliLocaleListener, useJalaliLocaleListener } from "./jalali";

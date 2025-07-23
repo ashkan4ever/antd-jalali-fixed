@@ -1,9 +1,9 @@
 import React from "react";
-import { DatePicker, Space, Radio, ConfigProvider, Row, Col } from "antd";
+import { Radio, ConfigProvider, Row, Col } from "antd";
 import type { DirectionType } from "antd/lib/config-provider";
 import fa_IR from "antd/lib/locale/fa_IR";
 import en_US from "antd/lib/locale/en_US";
-import { DatePicker as DatePickerJalali, Calendar, JalaliLocaleListener } from "./index.ts";
+import { JalaliLocaleListener, DatePicker, Calendar } from "./index.ts";
 import "./index.css";
 import { RadioChangeEvent } from "antd/lib";
 
@@ -21,50 +21,65 @@ const App = () => {
   };
 
   return (
-    <>
+    <ConfigProvider locale={locale} direction={direction}>
+      <JalaliLocaleListener />
       <Row justify="center">
         <Col span={18}>
-          <Space direction="vertical" size={12}>
-            <h2> Ant-Design Jalali Date picker </h2>
+          <Row><h2> Ant-Design Jalali Date picker </h2></Row>
 
-            <Space direction="horizontal" size={12}>
-              <div style={{ marginBottom: 16 }}>
-                <span style={{ marginRight: 16 }}>Change direction of components: </span>
-                <Radio.Group defaultValue={direction} onChange={changeDirection}>
-                  <Radio.Button key="ltr" value="ltr">
-                    LTR
-                  </Radio.Button>
-                  <Radio.Button key="rtl" value="rtl">
-                    RTL
-                  </Radio.Button>
-                </Radio.Group>
-              </div>
-              <div style={{ marginBottom: 16 }}>
-                <span style={{ marginRight: 16 }}>Change locale of components: </span>
-                <Radio.Group defaultValue={locale} onChange={changeLocale}>
-                  <Radio.Button key="en" value={en_US}>
-                    EN
-                  </Radio.Button>
-                  <Radio.Button key="fa" value={fa_IR}>
-                    FA_IR
-                  </Radio.Button>
-                </Radio.Group>
-              </div>
-            </Space>
+          <Row>
+            <div style={{ marginBottom: 16 }}>
+              <span style={{ marginRight: 16 }}>Change direction of components: </span>
+              <Radio.Group defaultValue={direction} onChange={changeDirection}>
+                <Radio.Button key="ltr" value="ltr">
+                  LTR
+                </Radio.Button>
+                <Radio.Button key="rtl" value="rtl">
+                  RTL
+                </Radio.Button>
+              </Radio.Group>
+            </div>
+          </Row>
+          <Row>
+            <div style={{ marginBottom: 16 }}>
+              <span style={{ marginRight: 16 }}>Change locale of components: </span>
+              <Radio.Group defaultValue={locale} onChange={changeLocale}>
+                <Radio.Button key="en" value={en_US}>
+                  EN
+                </Radio.Button>
+                <Radio.Button key="fa" value={fa_IR}>
+                  FA_IR
+                </Radio.Button>
+              </Radio.Group>
+            </div>
+          </Row>
 
-            <ConfigProvider locale={locale} direction={direction}>
-              <JalaliLocaleListener />
-              <Space direction="vertical" size={12}>
-                Gregorian: <DatePicker />
-                Jalali: <DatePickerJalali direction="rtl" />
-                Jalali RangePicker: <DatePickerJalali.RangePicker />
-                <Calendar />
-              </Space>
-            </ConfigProvider>
-          </Space>
+          <hr style={{ marginBottom: 24 }} />
+
+          <Row>
+            <div style={{ marginBottom: 16 }}>
+              <span style={{ marginRight: 16 }}>DatePicker: </span>
+              <DatePicker />
+            </div>
+          </Row>
+          <Row>
+            <div style={{ marginBottom: 16 }}>
+              <span style={{ marginRight: 16 }}>RangePicker: </span>
+              <DatePicker.RangePicker />
+              {/* <Calendar /> */}
+            </div>
+          </Row>
+          <Row>
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ marginBottom: 16 }}>
+                <span style={{ marginRight: 16 }}>Calendar: </span>
+              </div>
+              <Calendar />
+            </div>
+          </Row>
         </Col>
       </Row>
-    </>
+    </ConfigProvider>
   );
 };
 
