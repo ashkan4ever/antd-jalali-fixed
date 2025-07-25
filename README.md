@@ -1,5 +1,5 @@
-[![npm (scoped with tag)](https://img.shields.io/npm/v/antd-jalali/latest.svg?style=flat-square)](https://npmjs.com/package/antd-jalali)
-[![npm](https://img.shields.io/npm/dt/antd-jalali.svg?style=flat-square)](https://npmjs.com/package/antd-jalali)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/antd-jalali-fixed/latest.svg?style=flat-square)](https://npmjs.com/package/antd-jalali-fixed)
+[![npm](https://img.shields.io/npm/dt/antd-jalali-fixed.svg?style=flat-square)](https://npmjs.com/package/antd-jalali-fixed)
 
 # Ant-Design Jalali DatePicker
 

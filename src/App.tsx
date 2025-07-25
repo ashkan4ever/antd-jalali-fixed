@@ -66,7 +66,6 @@ const App = () => {
             <div style={{ marginBottom: 16 }}>
               <span style={{ marginRight: 16 }}>RangePicker: </span>
               <DatePicker.RangePicker />
-              {/* <Calendar /> */}
             </div>
           </Row>
           <Row>
