@@ -6,14 +6,6 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   deploy:
     environment:
