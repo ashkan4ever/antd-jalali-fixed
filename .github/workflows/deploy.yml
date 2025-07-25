@@ -3,7 +3,7 @@ name: Deploying to GitHub Pages
 on:
   push:
     branches:
-      - master  # deploy on push to master
+      - '*'  # deploy on push to master
 
 jobs:
   deploy:
